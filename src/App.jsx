@@ -5,6 +5,7 @@ import ProductsPage from "./pages/ProductsPage"
 import DefaultLayout from "./layouts/DefaultLayout"
 import SingleProductPage from "./pages/SingleProductPage"
 import NotFound from "./pages/NotFound"
+import { BudgetProvider } from "./contexts/BudgetContext"
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <>
+    <BudgetProvider>
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout/>}>
@@ -23,6 +25,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+    </BudgetProvider>
     </>
   )
 }
