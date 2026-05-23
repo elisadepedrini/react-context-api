@@ -18,7 +18,7 @@ export default function ProductsPage() {
     const {budget} = useBudget()
     console.log(budget);
     
-    const filteredProducts = budget ? products.filter((product) => product.price <= 30) : products
+    const filteredProducts = budget != 0 ? products.filter((product) => product.price <= budget) : products
         
 
   return (
