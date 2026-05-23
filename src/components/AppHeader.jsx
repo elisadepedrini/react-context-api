@@ -4,7 +4,6 @@ import { useBudget } from "../contexts/BudgetContext"
 export default function AppHeader() {
 
     const {budget, setBudget} = useBudget()
-    console.log(budget);
     
 
     return(
@@ -18,7 +17,10 @@ export default function AppHeader() {
                 <NavLink className="nav-item nav-link" to="/products">Prodotti</NavLink>
             </div>
 
-            <button type="button" className="btn" data-bs-toggle="button" onClick={() => {setBudget(!budget)}}>{budget ? "Disattiva Budget Mode" : "Attiva Budget Mode"}</button>
+            <button type="button" className="btn" data-bs-toggle="button"
+            onClick={() => {setBudget(!budget)}}
+            >{budget ? "Disattiva Budget Mode" : "Attiva Budget Mode"}
+            </button>
             
         </nav>
         

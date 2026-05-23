@@ -19,9 +19,9 @@ Create un componente Navbar.jsx (se non lo avete già)
 *MILESTONE 3*
 Modificate la pagina dei prodotti:
 
-[] Recuperate il valore budgetMode usando il context
-[] Se budgetMode === true, mostrate solo i prodotti con price <= 30
-[] Altrimenti, mostrare tutti i prodotti normalmente
+[x] Recuperate il valore budgetMode usando il context
+[x] Se budgetMode === true, mostrate solo i prodotti con price <= 30
+[x] Altrimenti, mostrare tutti i prodotti normalmente
 
 
 **BONUS**

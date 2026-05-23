@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useBudget } from "../contexts/BudgetContext";
 
 export default function ProductsPage() {
   const api_url = "https://fakestoreapi.com/products";
@@ -13,13 +14,21 @@ export default function ProductsPage() {
       });
   }, []);
 
+
+    const {budget} = useBudget()
+    console.log(budget);
+    
+    const filteredProducts = budget ? products.filter((product) => product.price <= 30) : products
+        
+
   return (
     <>
 
 
       <main>
         <div className="container m-4 row">
-          {products.map((product) => (            
+          
+          {filteredProducts.map((product) => (           
             <div className="card col-4 p-0" key={product.id}>
                 <div className="bg-light text-center mb-3">
                     <img
